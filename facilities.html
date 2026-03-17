@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Facilities | One Country Fitness</title>
+    <meta name="description" content="Explore the world-class facilities and equipment at One Country Fitness - Vasundhara's biggest gym.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .facility-hero {
+            padding: 150px 0 80px;
+            text-align: center;
+            background: linear-gradient(to bottom, var(--navy-dark), #1a3a6d);
+        }
+        
+        .facility-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .facility-item {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            height: 400px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+        
+        .facility-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .facility-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 40px;
+            background: linear-gradient(to top, rgba(10, 25, 47, 0.9), transparent);
+            color: var(--white);
+            transform: translateY(20px);
+            transition: var(--transition);
+        }
+        
+        .facility-item:hover {
+            transform: translateY(-10px);
+        }
+        
+        .facility-item:hover img {
+            transform: scale(1.1);
+            filter: brightness(0.6);
+        }
+        
+        .facility-item:hover .facility-overlay {
+            transform: translateY(0);
+        }
+        
+        .facility-title {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: var(--neon-green);
+        }
+        
+        .facility-desc {
+            font-size: 1rem;
+            opacity: 0.9;
+            max-width: 80%;
+        }
+
+        .amenities-section {
+            padding: 100px 0;
+            background: var(--navy-light);
+        }
+
+        .amenity-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .amenity-box {
+            background: var(--navy-dark);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid var(--glass);
+            transition: var(--transition);
+        }
+
+        .amenity-box i {
+            font-size: 2.5rem;
+            color: var(--neon-green);
+            margin-bottom: 20px;
+        }
+
+        .amenity-box h4 {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <!-- Transparent Header -->
+    <header id="header" class="scrolled">
+        <nav class="container">
+            <a href="index.html" class="logo" style="text-decoration: none;">
+                <span class="one">ONE</span><span class="country">COUNTRY</span><span class="fitness">FITNESS</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="trainers.html">Trainers</a></li>
+                <li><a href="facilities.html" class="highlight">Facilities</a></li>
+                <li><a href="index.html#location" class="btn-primary">Join Now</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="facility-hero">
+        <div class="container">
+            <h1 class="fade-up">World Class <span class="highlight">Infrastructure</span></h1>
+            <p class="fade-up delay-1">Explore our 10,000+ sq ft premium workspace designed for maximum gains.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="facility-grid">
+                <!-- Facility 1 -->
+                <div class="facility-item fade-up">
+                    <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=2070&auto=format&fit=crop" alt="Cardio Zone">
+                    <div class="facility-overlay">
+                        <h3 class="facility-title">Elite Cardio Zone</h3>
+                        <p class="facility-desc">Top-of-the-line treadmills, ellipticals, and rowers with interactive displays.</p>
+                    </div>
+                </div>
+
+                <!-- Facility 2 -->
+                <div class="facility-item fade-up delay-1">
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop" alt="Strength Area">
+                    <div class="facility-overlay">
+                        <h3 class="facility-title">Iron Paradise</h3>
+                        <p class="facility-desc">Dedicated massive free weights section with Olympic platforms and racks.</p>
+                    </div>
+                </div>
+
+                <!-- Facility 3 -->
+                <div class="facility-item fade-up delay-2">
+                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2070&auto=format&fit=crop" alt="CrossFit Box">
+                    <div class="facility-overlay">
+                        <h3 class="facility-title">Functional Core</h3>
+                        <p class="facility-desc">Dedicated CrossFit zones with battle ropes, sleds, and plyo boxes.</p>
+                    </div>
+                </div>
+
+                <!-- Facility 4 -->
+                <div class="facility-item fade-up">
+                    <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=1975&auto=format&fit=crop" alt="Sanitized Gym">
+                    <div class="facility-overlay">
+                        <h3 class="facility-title">Premium Hygiene</h3>
+                        <p class="facility-desc">Fully air-conditioned, regularly sanitized floors and locker rooms.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="amenities-section">
+        <div class="container">
+            <h2 class="section-title text-center">Premium Amenities</h2>
+            <div class="amenity-list">
+                <div class="amenity-box">
+                    <i class="fas fa-parking"></i>
+                    <h4>Ample Parking</h4>
+                </div>
+                <div class="amenity-box">
+                    <i class="fas fa-wind"></i>
+                    <h4>Full Air-Con</h4>
+                </div>
+                <div class="amenity-box">
+                    <i class="fas fa-shower"></i>
+                    <h4>Locker & Shower</h4>
+                </div>
+                <div class="amenity-box">
+                    <i class="fas fa-coffee"></i>
+                    <h4>Juice Bar</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <div class="logo">
+                <span class="one">ONE</span><span class="country">COUNTRY</span><span class="fitness">FITNESS</span>
+            </div>
+            <p>&copy; 2026 One Country Fitness. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/919958881636" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span>Talk to our Experts</span>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>

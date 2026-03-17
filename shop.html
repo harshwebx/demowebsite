@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Shop | One Country Fitness</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .shop-hero {
+            padding: 150px 0 80px;
+            background: #f8fafc;
+            text-align: center;
+        }
+        .shop-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 80px 0;
+        }
+        .product-card {
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+        .product-img {
+            height: 300px;
+            background: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #ccc;
+        }
+        .product-info {
+            padding: 25px;
+        }
+        .product-tag {
+            background: var(--neon-green);
+            color: var(--dark-text);
+            padding: 5px 12px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .price {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--dark-text);
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body class="white-theme">
+    <header id="header" class="scrolled">
+        <nav class="container">
+            <div class="logo">
+                <span class="one">ONE</span><span class="country">COUNTRY</span><span class="fitness">FITNESS</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#plans">Plans</a></li>
+                <li><a href="shop.html" style="color: var(--neon-green)">Shop</a></li>
+                <li><a href="index.html#location" class="btn-primary">Back to Gym</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="shop-hero">
+            <div class="container">
+                <h1 style="font-size: 4rem; font-weight: 800; color: var(--dark-text);">OFFICIAL SHOP</h1>
+                <p style="color: var(--text-muted); font-size: 1.2rem;">Premium Gear for Ultimate Results</p>
+            </div>
+        </div>
+
+        <div class="container shop-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-img"><i class="fas fa-tshirt"></i></div>
+                <div class="product-info">
+                    <span class="product-tag">Apparel</span>
+                    <h3>Pro Performance Tee</h3>
+                    <p class="price">₹1,299</p>
+                    <button class="btn-submit">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-img"><i class="fas fa-bottle-water"></i></div>
+                <div class="product-info">
+                    <span class="product-tag">Accessories</span>
+                    <h3>Neon Shaker Pro</h3>
+                    <p class="price">₹599</p>
+                    <button class="btn-submit">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="product-img"><i class="fas fa-dumbbell"></i></div>
+                <div class="product-info">
+                    <span class="product-tag">Equipment</span>
+                    <h3>Adjustable Dumbbells</h3>
+                    <p class="price">₹4,999</p>
+                    <button class="btn-submit">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+                <div class="product-img"><i class="fas fa-box"></i></div>
+                <div class="product-info">
+                    <span class="product-tag">Supplements</span>
+                    <h3>Whey Gold Standard</h3>
+                    <p class="price">₹6,499</p>
+                    <button class="btn-submit">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-simple" style="text-align: center; padding: 50px; background: #fff; border-top: 1px solid #eee;">
+        <p>&copy; 2026 One Country Fitness. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

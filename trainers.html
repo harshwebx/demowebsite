@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Trainers | One Country Fitness</title>
+    <meta name="description" content="Meet the expert trainers at One Country Fitness. Certified professionals dedicated to your fitness journey.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .trainer-hero {
+            padding: 150px 0 80px;
+            text-align: center;
+            background: linear-gradient(to bottom, var(--navy-dark), var(--navy-light));
+        }
+        
+        .trainer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            padding: 40px 0;
+        }
+        
+        .trainer-card {
+            background: var(--navy-light);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid var(--glass);
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .trainer-card:hover {
+            transform: translateY(-15px);
+            border-color: var(--neon-green);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+        
+        .trainer-img {
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .trainer-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .trainer-card:hover .trainer-img img {
+            transform: scale(1.1);
+        }
+        
+        .trainer-info {
+            padding: 30px;
+        }
+        
+        .trainer-role {
+            color: var(--neon-green);
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        .trainer-name {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+        
+        .trainer-bio {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+        
+        .trainer-socials {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .trainer-socials a {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background: var(--navy-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            text-decoration: none;
+            transition: var(--transition);
+            border: 1px solid var(--neon-green);
+        }
+        
+        .trainer-socials a:hover {
+            background: var(--neon-green);
+            color: var(--navy-dark);
+        }
+    </style>
+</head>
+<body>
+    <!-- Transparent Header -->
+    <header id="header" class="scrolled">
+        <nav class="container">
+            <a href="index.html" class="logo" style="text-decoration: none;">
+                <span class="one">ONE</span><span class="country">COUNTRY</span><span class="fitness">FITNESS</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="trainers.html" class="highlight">Trainers</a></li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="index.html#location" class="btn-primary">Join Now</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="trainer-hero">
+        <div class="container">
+            <h1 class="fade-up">Master Your <span class="highlight">Body</span></h1>
+            <p class="fade-up delay-1">Learn from the best in the industry. Our certified trainers are here to push your limits.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="trainer-grid">
+                <!-- Trainer 1 -->
+                <div class="trainer-card fade-up">
+                    <div class="trainer-img">
+                        <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?q=80&w=1887&auto=format&fit=crop" alt="Adnan Sir">
+                    </div>
+                    <div class="trainer-info">
+                        <span class="trainer-role">Head Coach | CrossFit Expert</span>
+                        <h3 class="trainer-name">Adnan Sir</h3>
+                        <p class="trainer-bio">With over 10 years of experience in high-intensity training, Adnan specializes in functional movement and performance coaching.</p>
+                        <div class="trainer-socials">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trainer 2 -->
+                <div class="trainer-card fade-up delay-1">
+                    <div class="trainer-img">
+                        <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2ec617?q=80&w=2070&auto=format&fit=crop" alt="Piyush Sir">
+                    </div>
+                    <div class="trainer-info">
+                        <span class="trainer-role">Bodybuilding | Strength Specialist</span>
+                        <h3 class="trainer-name">Piyush Sir</h3>
+                        <p class="trainer-bio">Piyush focuses on hypertrophy and strength gains, helping hundreds achieve their dream physique through science-based training.</p>
+                        <div class="trainer-socials">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trainer 3 -->
+                <div class="trainer-card fade-up delay-2">
+                    <div class="trainer-img">
+                        <img src="https://images.unsplash.com/photo-1541534741688-6078c64b52d3?q=80&w=2070&auto=format&fit=crop" alt="Suraj Sir">
+                    </div>
+                    <div class="trainer-info">
+                        <span class="trainer-role">Mobility | Core Strength</span>
+                        <h3 class="trainer-name">Suraj Sir</h3>
+                        <p class="trainer-bio">Suraj combines mobility drills with core strength exercises to ensure students stay injury-free while getting stronger.</p>
+                        <div class="trainer-socials">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trainer 4 -->
+                <div class="trainer-card fade-up">
+                    <div class="trainer-img">
+                        <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=2070&auto=format&fit=crop" alt="Pawan Sharma">
+                    </div>
+                    <div class="trainer-info">
+                        <span class="trainer-role">Personal Trainer | Nutritionist</span>
+                        <h3 class="trainer-name">Pawan Sharma</h3>
+                        <p class="trainer-bio">Expert in weight loss transformations and personalized nutrition planning for long-term health success.</p>
+                        <div class="trainer-socials">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <div class="logo">
+                <span class="one">ONE</span><span class="country">COUNTRY</span><span class="fitness">FITNESS</span>
+            </div>
+            <p>&copy; 2026 One Country Fitness. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/919958881636" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span>Talk to our Experts</span>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>

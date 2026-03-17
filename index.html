@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Country Fitness | Vasundhara's Premium Gym</title>
+    <meta name="description" content="One Country Fitness is Vasundhara's biggest and safest fitness destination. Premium cardio, CrossFit, certified trainers, and world-class equipment.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- Three.js for 3D -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <span class="one">ONE</span><span class="country">COUNTRY</span><span class="fitness">FITNESS</span>
+            </div>
+            <div class="progress-bar">
+                <div id="progress" style="width: 0%"></div>
+            </div>
+            <p>Loading the Experience... <span id="progress-text">0%</span></p>
+        </div>
+    </div>
+
+    <!-- Page Scroll Progress -->
+    <div class="page-progress">
+        <div id="scroll-indicator"></div>
+    </div>
+
+    <!-- Transparent Header -->
+    <header id="header">
+        <nav class="container">
+            <div class="logo">
+                <span class="one">ONE</span><span class="country">COUNTRY</span><span class="fitness">FITNESS</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#plans">Plans</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="trainers.html">Trainers</a></li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="index.html#location" class="btn-primary">Join Now</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- New Interactive Hero Section -->
+    <section id="hero-new">
+        <div class="hero-overlay"></div>
+        <div class="cursor-light"></div>
+        
+        <!-- Continuous Moving Text Background -->
+        <div class="marquee-wrapper">
+            <div class="marquee left-to-right">
+                <span>ONE NATION • ONE BODY • ONE COUNTRY FITNESS • LIMITLESS STRENGTH • </span>
+                <span>ONE NATION • ONE BODY • ONE COUNTRY FITNESS • LIMITLESS STRENGTH • </span>
+            </div>
+            <div class="marquee right-to-left">
+                <span>UNLEASH THE BEAST • PUSH YOUR LIMITS • NO EXCUSES • TRAIN HARDER • </span>
+                <span>UNLEASH THE BEAST • PUSH YOUR LIMITS • NO EXCUSES • TRAIN HARDER • </span>
+            </div>
+        </div>
+
+        <div class="container hero-wrapper">
+            <div class="hero-content-new">
+                <h1 class="hero-title">
+                    <span class="outline">TRANSFORM</span><br>
+                    YOURSELF<br>
+                    <span class="small-text">THE ULTIMATE FITNESS EXPERIENCE</span>
+                </h1>
+                <p class="hero-description">Vasundhara's most premium fitness destination. Join the elite community and redefine your physical boundaries.</p>
+                <div class="hero-actions">
+                    <a href="#free-trial" class="btn-cta">Start Free Trial</a>
+                    <a href="facilities.html" class="btn-outline">Explore Gym</a>
+                </div>
+            </div>
+
+            <!-- Hero Background/Main Video -->
+            <div class="hero-video-container">
+                <video autoplay muted loop playsinline class="hero-video">
+                    <source src="Video Project.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-down">
+            <div class="line"></div>
+            <span>SCROLL</span>
+        </div>
+    </section>
+
+
+    <!-- Highlights Section -->
+    <section id="about" class="section">
+        <div class="container grid-2">
+            <div class="about-text">
+                <h2 class="section-title">Premium Space, Expert Guidance</h2>
+                <p>Spanning the <strong>1st and 2nd levels</strong>, our facility is the largest in Vasundhara Sector 14. We prioritize your health with fully air-conditioned spaces and meticulously clean, sanitized floors. Plus, with <strong>ample parking</strong>, your workout starts hassle-free.</p>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check-circle"></i> 10,000+ Sq Ft Premium Space</li>
+                    <li><i class="fas fa-check-circle"></i> Fully Air Conditioned</li>
+                    <li><i class="fas fa-check-circle"></i> Clean & Sanitized Levels</li>
+                    <li><i class="fas fa-check-circle"></i> Dedicated Ample Parking</li>
+                </ul>
+            </div>
+            <div class="about-images">
+                <img src="premium_gym_interior_modern_1773724419463.png" alt="Premium Gym Interior" class="img-reveal" loading="lazy">
+                <img src="gym_cardio_section_photo_1773669905484.png" alt="Cardio Section" class="img-reveal" loading="lazy">
+                <img src="gym_weights_area_photo_1773669922746.png" alt="Weights Area" class="img-reveal" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section bg-dark">
+        <div class="container text-center">
+            <h2 class="section-title">Our Services & Amenities</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="card-icon"><i class="fas fa-dumbbell"></i></div>
+                    <h3>Premium Cardio & Weights</h3>
+                    <p>State-of-the-art treadmills, ellipticals, and a massive free-weights section for all levels.</p>
+                </div>
+                <div class="service-card">
+                    <div class="card-icon"><i class="fas fa-bolt"></i></div>
+                    <h3>CrossFit & Functional</h3>
+                    <p>Dedicated zones for high-intensity training, agility, and core strength optimization.</p>
+                </div>
+                <div class="service-card">
+                    <div class="card-icon"><i class="fas fa-user-ninja"></i></div>
+                    <h3>Certified Trainers</h3>
+                    <p>Expert guidance from industry-certified professionals like Adnan, Piyush, and Suraj Sir.</p>
+                </div>
+                <div class="service-card">
+                    <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Body Composition Analysis</h3>
+                    <p>Track your progress with precision metrics and personalized goal setting.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- World Class Equipment Section -->
+    <section id="equipment" class="section">
+        <div class="container">
+            <h2 class="section-title text-center">World-Class <span class="highlight">Infrastructure</span></h2>
+            <div class="equipment-grid">
+                <!-- Treadmill -->
+                <div class="equipment-card">
+                    <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=2070" alt="Elite Treadmills" loading="lazy">
+                    <div class="equipment-info">
+                        <h3>Elite Cardio Zone</h3>
+                        <p>High-end treadmills with interactive touchscreens and performance tracking.</p>
+                    </div>
+                </div>
+                <!-- Strength -->
+                <div class="equipment-card">
+                    <img src="https://images.unsplash.com/photo-1541534741688-6078c64b52d3?q=80&w=2070" alt="Free Weights" loading="lazy">
+                    <div class="equipment-info">
+                        <h3>The Iron Paradise</h3>
+                        <p>Massive range of dumbbells, Olympic barbells, and custom weight plates.</p>
+                    </div>
+                </div>
+                <!-- Power -->
+                <div class="equipment-card">
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070" alt="Power Racks">
+                    <div class="equipment-info">
+                        <h3>Strength & Power</h3>
+                        <p>Professional grade squat racks, bench presses, and deadlift platforms.</p>
+                    </div>
+                </div>
+                <!-- Machine -->
+                <div class="equipment-card">
+                    <img src="https://images.unsplash.com/photo-1590239068552-6c30df930511?q=80&w=2070" alt="Cable Machines">
+                    <div class="equipment-info">
+                        <h3>Functional Versatility</h3>
+                        <p>Multi-functional cable machines and selectorized equipment for targeted training.</p>
+                    </div>
+                </div>
+                <!-- Bike -->
+                <div class="equipment-card">
+                    <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=1975" alt="Air Bikes">
+                    <div class="equipment-info">
+                        <h3>Conditioning Hub</h3>
+                        <p>Assault bikes, rowers, and ski-ergs for high-intensity cardiovascular conditioning.</p>
+                    </div>
+                </div>
+                <!-- Recovery -->
+                <div class="equipment-card">
+                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2070" alt="CrossFit Zone">
+                    <div class="equipment-info">
+                        <h3>The Box Experience</h3>
+                        <p>Dedicated CrossFit floor with battle ropes, sleds, and plyo boxes.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="explore-more-container">
+                <a href="#hero-new" class="btn-explore">Explore More Rooms</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Membership Plans -->
+    <section id="plans" class="section">
+        <div class="container text-center">
+            <h2 class="section-title">Membership Plans</h2>
+            <div class="plans-grid">
+                <!-- Basic -->
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3>Starter</h3>
+                        <div class="plan-price">₹1,999<span>/month</span></div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Gym Floor Access</li>
+                        <li><i class="fas fa-check"></i> Free Assessment</li>
+                        <li><i class="fas fa-check"></i> Standard Hours</li>
+                        <li class="disabled"><i class="fas fa-times"></i> Group Classes</li>
+                        <li class="disabled"><i class="fas fa-times"></i> Personal Trainer</li>
+                    </ul>
+                    <a href="#location" class="btn-submit">Choose Plan</a>
+                </div>
+
+                <!-- Elite -->
+                <div class="plan-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="plan-header">
+                        <h3>Elite Pro</h3>
+                        <div class="plan-price">₹3,499<span>/month</span></div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> 24/7 Priority Access</li>
+                        <li><i class="fas fa-check"></i> All Group Classes</li>
+                        <li><i class="fas fa-check"></i> Nutrition Plans</li>
+                        <li><i class="fas fa-check"></i> Locker & Shower</li>
+                        <li class="disabled"><i class="fas fa-times"></i> PT Sessions</li>
+                    </ul>
+                    <a href="#location" class="btn-submit">Choose Plan</a>
+                </div>
+
+                <!-- Ultimate -->
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3>Ultimate Hero</h3>
+                        <div class="plan-price">₹5,999<span>/month</span></div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Everything in Elite</li>
+                        <li><i class="fas fa-check"></i> 4 PT Sessions/Mo</li>
+                        <li><i class="fas fa-check"></i> Recovery Zone Plus</li>
+                        <li><i class="fas fa-check"></i> Guest Pass (1/mo)</li>
+                        <li><i class="fas fa-check"></i> Official Shop Credit</li>
+                    </ul>
+                    <a href="#location" class="btn-submit">Choose Plan</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="section">
+        <div class="container text-center">
+            <h2 class="section-title">Loved by Vasundhara's Fitness Community</h2>
+            <div class="rating-badge">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span>4.8-Star Google Rating</span>
+            </div>
+
+            <div class="review-carousel-container">
+                <div class="review-carousel" id="review-slider">
+                    <!-- Rahul K. -->
+                    <div class="review-card">
+                        <div class="review-text">"Professional and knowledgeable staff. Special shoutout to trainer Piyush for the amazing guidance!"</div>
+                        <div class="review-author">
+                            <a href="https://maps.google.com/maps/contrib/103761454478275965412" target="_blank">Rahul K.</a>
+                        </div>
+                    </div>
+                    <!-- Sneha M. -->
+                    <div class="review-card">
+                        <div class="review-text">"Clean and well-maintained gym. The atmosphere is highly motivating for daily workouts."</div>
+                        <div class="review-author">Sneha M.</div>
+                    </div>
+                    <!-- Amit Singh -->
+                    <div class="review-card">
+                        <div class="review-text">"Great variety of activities and group classes offered. The management is top-notch."</div>
+                        <div class="review-author">
+                            <a href="https://maps.app.goo.gl/28ZycDPrUZJcoQMUA3" target="_blank">Amit Singh</a>
+                        </div>
+                    </div>
+                    <!-- Vikas S. -->
+                    <div class="review-card">
+                        <div class="review-text">"Trainer Adnan is fantastic. Easily the best fitness center in Vasundhara Sector 14."</div>
+                        <div class="review-author">
+                            <a href="https://maps.app.goo.gl/28ZycDPrUZJcoQMUA4" target="_blank">Vikas S.</a>
+                        </div>
+                    </div>
+                    <!-- Priya Sharma -->
+                    <div class="review-card">
+                        <div class="review-text">"Friendly and supportive staff. Pawan Sharma really helps you push your limits safely."</div>
+                        <div class="review-author">
+                            <a href="https://maps.app.goo.gl/28ZycDPrUZJcoQMUA5" target="_blank">Priya Sharma</a>
+                        </div>
+                    </div>
+                    <!-- Rohan Verma -->
+                    <div class="review-card">
+                        <div class="review-text">"Spacious layout with state-of-the-art equipment. Suraj Sir's training is exceptional."</div>
+                        <div class="review-author">
+                            <a href="https://maps.google.com/maps/contrib/117709899521284738453" target="_blank">Rohan Verma</a>
+                        </div>
+                    </div>
+                    <!-- Neha Gupta -->
+                    <div class="review-card">
+                        <div class="review-text">"The best, biggest and safest gym in Vasundhara. I absolutely love the positive vibe here!"</div>
+                        <div class="review-author">Neha Gupta</div>
+                    </div>
+                    <!-- Karan D. -->
+                    <div class="review-card">
+                        <div class="review-text">"Certified trainers and a very lively atmosphere. Nikhil is a great coach who actually cares about your form."</div>
+                        <div class="review-author">
+                            <a href="https://maps.app.goo.gl/28ZycDPrUZJcoQMUA8" target="_blank">Karan D.</a>
+                        </div>
+                    </div>
+                    <!-- Anjali R. -->
+                    <div class="review-card">
+                        <div class="review-text">"Ample parking, world-class group classes, and clean locker rooms. A truly premium experience."</div>
+                        <div class="review-author">Anjali R.</div>
+                    </div>
+                    <!-- Saurabh T. -->
+                    <div class="review-card">
+                        <div class="review-text">"Clean, hygienic, and safe environment. The personalized body composition analysis helped me set real goals."</div>
+                        <div class="review-author">
+                            <a href="https://maps.app.goo.gl/CXAUAAo2Tam2yALw90" target="_blank">Saurabh T.</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- One Day Free Trial Section -->
+    <section id="free-trial" class="section trial-section">
+        <div class="container trial-container">
+            <div class="trial-content">
+                <h2 class="section-title">Claim Your <span class="highlight">Free</span> One-Day Pass</h2>
+                <p style="margin-bottom: 40px;">Experience the energy, the community, and the world-class facilities at One Country Fitness. No commitments, just results.</p>
+                
+                <div class="trial-benefit">
+                    <i class="fas fa-check"></i>
+                    <div>
+                        <h4>Full Access</h4>
+                        <p>Enjoy all gym zones and equipment for a full day.</p>
+                    </div>
+                </div>
+                
+                <div class="trial-benefit">
+                    <i class="fas fa-check"></i>
+                    <div>
+                        <h4>Free Consultation</h4>
+                        <p>Talk to our expert trainers about your fitness goals.</p>
+                    </div>
+                </div>
+                
+                <div class="trial-benefit">
+                    <i class="fas fa-check"></i>
+                    <div>
+                        <h4>Premium Amenities</h4>
+                        <p>Access to showers, lockers, and air-conditioned spaces.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="trial-form-card">
+                <h3 style="margin-bottom: 30px; text-align: center;">Get Your Pass</h3>
+                <form id="trial-form">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" placeholder="Enter your WhatsApp number" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Preferred Date</label>
+                        <input type="date" required>
+                    </div>
+                    <button type="submit" class="btn-submit">Claim Free Trial</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Timings -->
+    <section id="location" class="section location-section">
+        <div class="container grid-2">
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.835467040448!2d77.3486383!3d28.6646561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfbae00000001%3A0xc682247cc467a5b3!2sOne%20Country%20Fitness!5e0!3m2!1sen!2sin!4v1705000000000!5m2!1sen!2sin" 
+                    width="100%" height="450" style="border:0; border-radius: 15px;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="info-card">
+                <h3>Visit The Community</h3>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>C2, 1st and 2nd Floor, Sector 14A, Block A, Sector 14, Vasundhara, Ghaziabad, UP 201012</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <p><strong>Mon - Sat:</strong> 6:00 AM – 10:00 PM</p>
+                        <p><strong>Sunday:</strong> 8:00 AM – 8:00 PM</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <p>+91 9958881636</p>
+                </div>
+                <a href="https://maps.app.goo.gl/28ZycDPrUZJcoQMUA3" target="_blank" class="btn-secondary">Get Directions</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <div class="logo">
+                <span class="one">ONE</span><span class="country">COUNTRY</span><span class="fitness">FITNESS</span>
+            </div>
+            <p>&copy; 2026 One Country Fitness. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/919958881636" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span>Talk to our Experts</span>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
